@@ -1,0 +1,107 @@
+.news-letter{
+    margin-bottom: 10vw;
+    height: 40vh;
+    background-image: linear-gradient(#e3d4e2, #ffffff);
+    padding:30px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.news-letter h1{
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #454545;
+}
+.news-letter p{
+    font-size: 20px;
+    color: #454545;
+    padding-bottom: 10px;
+}
+.news-letter div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid rgb(200, 199, 199);
+    height: 40px;
+    width: 420px;
+    border-radius: 80px;
+    /* width: 60%; */
+}
+.news-letter  input{
+    height: 100%;
+    width: 75%;
+    border: none;
+    border-radius: 80px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+}
+.news-letter button{
+    height: 100%;
+    width: 25%;
+    border:none;
+    background-color: black;
+    border-radius: 80px;
+    color: #fff;
+    font-size: 16px;
+  
+}
+@media screen  and (max-width:1024px){
+    .news-letter h1{
+        font-size: 35px;
+    }
+    .news-letter p{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:769px) {
+    .news-letter{
+        padding:20px 40px;
+    }
+    .news-letter h1{
+        font-size: 28px;
+    }
+    .news-letter p{
+        font-size: 16px;
+    }
+   
+}
+@media screen and (max-width:578px) {
+    .news-letter{
+        padding:10px 20px;
+    }
+    .news-letter h1{
+        font-size: 26px;
+    }
+    .news-letter p{
+        font-size: 14px;
+    }
+    .news-letter div{
+        width:80%;
+        height: 35px;
+    }
+    .news-letter button{
+        width: 35%;
+        font-size: 14px;
+    }
+   
+}
+@media screen and (max-width:480px) {
+    .news-letter{
+        padding:10px 20px;
+    }
+    .news-letter h1{
+        font-size: 20px;
+    }
+    .news-letter p {
+        font-size: 12px;
+    }
+    .news-letter button{
+        font-size: 12px;
+    }
+}
