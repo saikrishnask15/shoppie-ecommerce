@@ -4,7 +4,8 @@
    justify-content: center;
    align-items: center;
    /* background-color: #ebcdcd; */
-   gap:40px
+   gap:40px;
+   padding-top: 40px;
 }
 .footer-links{
     display: flex;

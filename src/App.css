@@ -4,7 +4,7 @@
     padding-inline: 8vw;
 }
 .main{
-    padding-block: 10vw;
+   padding-top: 60px;
 }
 @media only screen and (max-width:1024px) {
     .container{
@@ -22,3 +22,10 @@
 @import './styles/NewCollection.css';
 @import './styles/NewsLetter.css';
 @import './styles/Footer.css';
+@import './styles/ShopCategory.css';
+@import './styles/LoginSignup.css';
+@import './styles/Breadcrum.css';
+@import './styles/ProductDisplay.css';
+@import './styles/DescriptionReviewsBox.css';
+@import './styles/RelativeProducts.css';
+@import './styles/Cart.css';

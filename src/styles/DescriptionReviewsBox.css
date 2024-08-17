@@ -1,0 +1,27 @@
+.DescriptionReviewsBox{
+    margin: 100px auto;
+
+}
+.DescriptionReviewsBox-navigator{
+    display: flex;
+}
+.DescriptionReviewsBox-nav-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid rgba(71, 73, 71, 0.467);
+}
+.DescriptionReviewsBox-nav-box.fade{
+    background-color: #fbfbfb;
+    color: #949393;
+}
+.DescriptionReviewsBox-description{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 30px 20px 40px 20px;
+    border:1px solid rgba(71, 73, 71, 0.467);
+}

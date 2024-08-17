@@ -6,10 +6,10 @@ const SideBar = () => {
               <button href="/" className="button">Login</button>
             <div className="side-links">
              <a href="/">Shop</a>
-             <a href="/">Men</a>
-             <a href="/">Women</a>
-             <a href="/">Kids</a>
-             <a href="/">Cart</a>
+             <a href="/mens">Men</a>
+             <a href="/womens">Women</a>
+             <a href="/kids">Kids</a>
+             <a href="/cart">Cart</a>
            
             </div>
         </div>
