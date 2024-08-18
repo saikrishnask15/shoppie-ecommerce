@@ -3,7 +3,10 @@ import all_product from "./assests/allProducts";
 export const ShopContext = createContext();
 
 const ShopContextProvider = ({ children }) => {
-  const [cartData, setCartData] = useState([]);
+  const [cartData, setCartData] = useState(()=>{
+     const items= JSON.parse(localStorage.getItem("cartData"));
+     return items || [];
+  });
 
   const addToCart = (product) => {
     const existingInCart = cartData.find((index) => index.id === product.id);
@@ -26,7 +29,11 @@ const ShopContextProvider = ({ children }) => {
         localStorage.setItem("cartData", JSON.stringify(cartData));
   },[cartData]);
 
-  const value = { all_product, cartData, addToCart, RemoveItem};
+    const totalPrice = () => {
+      return cartData.reduce((acc, item) => acc + (item.new_price * item.quantity), 0);
+    };
+
+  const value = { all_product, cartData, addToCart, RemoveItem, totalPrice};
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
 
