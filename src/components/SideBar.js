@@ -2,7 +2,7 @@
 const SideBar = () => {
     return ( 
         <div className="side-bar">
-              <h1>Shoppie</h1> 
+                <a href="/"><h1>Shoppie</h1></a>
               <button href="/" className="button">Login</button>
             <div className="side-links">
              <a href="/">Shop</a>

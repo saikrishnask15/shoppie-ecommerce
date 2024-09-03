@@ -1,16 +1,18 @@
 .loginSignup{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    padding-block: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    background-color: #e3d4e2;
+    /* margin-top: 50px; */
 }
 .loginSignup-container{
-    width: 550px;
+    width: 500px;
     background-color: #fff;
     padding: 40px;
+     /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 }
 .loginSignup-container h1{
     padding: 0 0 20px 0;
@@ -49,4 +51,30 @@
 }
 .loginSignup-agree p{
     margin-left: 10px;
+}
+@media screen and (max-width: 800px) {
+    .loginSignup-container h1{
+        font-size: 24px;
+    }
+    .loginSignup-fields input {
+        height: 40px;
+        font-size: 14px;
+    }
+    .loginSignup-container button {
+        height: 40px;
+        font-size: 14px;
+    }
+    .loginSignup-login, .loginSignup-agree{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 578px) {
+    .loginSignup-container{
+         box-shadow: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .loginSignup-container{
+         padding: 30px;
+    }
 }

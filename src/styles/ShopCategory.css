@@ -37,6 +37,21 @@
     background: #ededed;
     color: #787878;
     font-weight: 500;
-  
 
+}
+@media screen and (max-width:1024px) {
+  .ShopCategory-banner {
+    margin: 30px auto 20px auto;  
+  }
+}
+@media screen and (max-width:924px) {
+  .ShopCategory-products{
+    grid-template-columns:  1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width:579px) {
+  .ShopCategory-products{
+    grid-template-columns: 1fr 1fr; 
+  }
+  
 }

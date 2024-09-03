@@ -91,7 +91,7 @@ background-color: #385170;
 .sidebar-icon svg{
     font-size: 25px;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:924px){
     .nav-bar{
         height: 55px;
     }
@@ -123,9 +123,14 @@ background-color: #385170;
 .side-links{
     display: flex;
     flex-direction: column;
+    margin-top: 5px;
 }
 .side-links a{
     padding: 10px 10px;
+}
+.side-links a:hover{
+    background-color: #385170;
+    color: #fff;
 }
 .side-left{
     display: flex;

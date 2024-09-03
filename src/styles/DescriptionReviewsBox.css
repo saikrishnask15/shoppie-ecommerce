@@ -25,3 +25,12 @@
     padding: 30px 20px 40px 20px;
     border:1px solid rgba(71, 73, 71, 0.467);
 }
+@media screen and (max-width: 600px) {
+    .DescriptionReviewsBox{
+        font-size: 14px;
+        margin: 50px auto;
+    }
+    .DescriptionReviewsBox-description{
+        padding: 20px 10px;
+    }
+}

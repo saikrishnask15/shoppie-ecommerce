@@ -7,6 +7,9 @@
    padding-top: 60px;
 }
 @media only screen and (max-width:1024px) {
+    .main{
+        padding-top: 0px;
+    }
     .container{
         padding-inline: 6vw;
     }
@@ -15,6 +18,14 @@
     .container{
         padding-inline: 3vw;
     }
+}
+.app{
+   display: flex; 
+   flex-direction: column;
+   min-height:100vh
+}
+.app-content{
+    flex: 1
 }
 @import './styles/item.css';
 @import './styles/popular.css';

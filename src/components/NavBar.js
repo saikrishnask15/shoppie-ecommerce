@@ -14,7 +14,7 @@ const NavBar = () => {
   const location = useLocation();
   return (
     <div className="nav-bar">
-      <h1>Shoppie</h1>
+      <a href="/"><h1>Shoppie</h1></a>
       <div className="nav-links">
         <li>
           <Link to="/" className={location.pathname === '/' && 'active'}>Shop</Link>

@@ -1,7 +1,22 @@
-.breadcrum{
-    font-size: 16px;
-    color: #757474;
-    margin: 50px 0;
-    font-weight: 500;
-    text-transform: capitalize;
+.breadcrum {
+  font-size: 16px;
+  color: #757474;
+  margin: 50px 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1024px) {
+  .breadcrum {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .breadcrum {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 579px) {
+  .breadcrum {
+    margin: 25px 0;
+  }
 }

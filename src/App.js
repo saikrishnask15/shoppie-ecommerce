@@ -13,7 +13,9 @@ import banner_kids from "./components/assests/banner_kids.png";
 function App() {
   return (
     <BrowserRouter>
+    <div className="app">
       <NavBar />
+      <div className="app-content">
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route
@@ -34,7 +36,9 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/login" element={<LoginSignUp/>} /> 
       </Routes>
+      </div>
       <Footer />
+      </div>
     </BrowserRouter>
   );
 }

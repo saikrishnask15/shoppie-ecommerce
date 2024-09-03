@@ -3,11 +3,11 @@ import stardull_icon from "./assests/star_dull_icon.png";
 import { useContext } from "react";
 import { ShopContext } from "./ShopContext";
 const ProductDisplay = ({ product }) => {
-  const {addToCart}= useContext(ShopContext);
-  const AddtoCart=(product)=>{
+  const { addToCart } = useContext(ShopContext);
+  const AddtoCart = (product) => {
     addToCart(product);
     // console.log(product);
-  }
+  };
   return (
     <div className="productDisplay">
       <div className="productDisplay-left">
@@ -18,7 +18,9 @@ const ProductDisplay = ({ product }) => {
           <img src={product.image} alt="" />
         </div>
         <div className="productDisplay-img">
-          <img src={product.image} alt="" />
+          <div className="productDisplay-main-img">
+            <img src={product.image} alt="" />
+          </div>
         </div>
       </div>
       <div className="productDisplay-right">
@@ -53,8 +55,10 @@ const ProductDisplay = ({ product }) => {
             <div>XL</div>
           </div>
         </div>
-        <button onClick={()=>AddtoCart(product)}>ADD TO CART</button>
-       
+        <div className="productDisplay-btn">
+          <button onClick={() => AddtoCart(product)}>ADD TO CART</button>
+          <button onClick={() => AddtoCart(product)}>BUY NOW</button>
+        </div>
       </div>
     </div>
   );

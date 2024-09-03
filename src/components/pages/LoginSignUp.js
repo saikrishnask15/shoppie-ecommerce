@@ -8,14 +8,15 @@ const LoginSignUp = () => {
           <input type="email" placeholder="Email Address" />
           <input type="password" placeholder="Password" />
         </div>
-        <button>Continue</button>
-        <p className="loginSignup-login">
-          Already have a account? <a href="/">Login here</a>
-        </p>
         <div className="loginSignup-agree">
           <input type="checkbox" name="" id="" />
           <p>I agree to the terms of use & privacy policy</p>
         </div>
+        <button>Continue</button>
+        <p className="loginSignup-login">
+          Already have a account? <a href="/">Login here</a>
+        </p>
+
       </div>
     </div>
   );

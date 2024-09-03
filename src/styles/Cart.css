@@ -1,6 +1,9 @@
 .cart{
     margin: 60px auto;
 }
+.cart h1{
+    font-weight: 600;
+}
 .cart hr{
     height: 3px;
     background-color: #e2e2e2;
@@ -8,9 +11,9 @@
 }
 .cart-format{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    gap: 75px;
+    gap: 50px;
     padding: 20px 0;
     color: #454545;
     font-size: 18px;
@@ -26,7 +29,7 @@
 }
 .cart svg{
         width: 15px;
-        margin: 0 40px;
+        /* margin: 0 40px; */
         cursor: pointer;
 }
 .cartItems-format button{
@@ -40,7 +43,6 @@
     align-items: flex-start;
     justify-content: space-between;
     margin: 40px 0;
-
 }
 .cartItems-total-ctn{
     width: 45%;
@@ -86,8 +88,8 @@
 }
 .cart-promo-input-item{
     display: flex;
-    width: 60%;
-    height: 35px;
+    width: 80%;
+    height: 40px;
 }
 .cart-promo-input-item input{
    width: 70%;
@@ -105,4 +107,74 @@
     background-color: rgb(17, 17, 17);
     color: #fff;
     font-size: 14px;
+}
+@media screen and (max-width:1280px) {
+    .cart h1{
+        font-size: 28px;
+    }
+    .cart-format{
+        display: grid;
+        grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: 30px;
+        font-size: 15px;
+    }
+    .cartItems-format button {
+        width: 50px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:924px) {
+    .cart h1{
+        font-size: 24px;
+    }
+    .cart-format{
+        padding: 15px 0;
+    }
+
+    .cartItems-format img {
+        height: 50px;
+    }
+    .cartItems-format button{
+        height: 30px;
+        width: 30px;
+    }
+    .cartItems-total-ctn {
+        width: 100%;
+    }
+    .cartItems-down{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .cart-promo-ctn{
+        width: 300px;
+        max-width: 400px;
+    }
+   
+}
+@media screen and (max-width: 600px) {
+    .cart-format{
+        font-size: 12px;
+    }
+    .cartItems-total-ctn h1{
+        font-size: 16px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .cart-format{
+        font-size: 10px;
+    }
+    .cart-format {
+        gap: 20px;
+    }
+    .cart-heading-format{
+        display: none;
+    }
+    .cart-promo-input-item{
+        height: 30px;
+    }
+    .cart-proceed-btn button{
+        padding: 8px 10px;
+       
+    }
 }
