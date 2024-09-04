@@ -1,4 +1,4 @@
-import exclusiveimage from "./assests/exclusive_image.png";
+import exclusiveimage from "../assests/exclusive_image.png";
 const Offers = () => {
   return (
     <div className="offers">

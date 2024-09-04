@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ShopContext } from "../ShopContext";
+import { ShopContext } from "../../ShopContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 const Cart = () => {

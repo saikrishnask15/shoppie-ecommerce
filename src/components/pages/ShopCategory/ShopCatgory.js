@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Item from "../item";
-import { ShopContext } from "../ShopContext";
+import Item from "../../Item/item";
+import { ShopContext } from "../../ShopContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 

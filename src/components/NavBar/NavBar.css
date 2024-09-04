@@ -10,6 +10,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 555;
 }
 .nav-bar h1{
     color: #385170;
@@ -98,9 +99,9 @@ background-color: #385170;
     .nav-links{
         display: none;
     }
-    .nav-left{
+    /* .nav-left{
         display: none;
-    }
+    } */
     .sidebar-icon{
         display: block;
     }
@@ -138,4 +139,23 @@ background-color: #385170;
 }
 .side-bar button{
     margin-left: 5px;
+}
+@media screen and (max-width:600px) {
+    .nav-bar h1 {
+        font-size: 28px;
+    }
+    .nav-left {
+        column-gap: 28px;
+    }
+    .button{
+        height: 30px;
+        width: 70px;
+        font-size: 16px;
+    }
+    .nav-left-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+    
 }

@@ -1,6 +1,6 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import heroimage from './assests/hero_image.png'
+import heroimage from '../assests/hero_image.png'
 const Hero = () => {
   return (
     <div className="hero container">

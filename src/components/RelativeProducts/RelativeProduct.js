@@ -1,5 +1,5 @@
-import dataProducts from './assests/data';
-import Item from './item';
+import dataProducts from '../assests/data';
+import Item from '../Item/item';
 const RelativeProduct = () => {
     return ( 
         <div className="relativeProduct">

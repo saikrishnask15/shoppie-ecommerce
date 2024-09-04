@@ -1,5 +1,5 @@
-import new_collections from "./assests/new_collections";
-import Item from "./item";
+import new_collections from "../assests/new_collections";
+import Item from "../Item/item";
 const NewCollection = () => {
   return (
     <div className="new-collection">

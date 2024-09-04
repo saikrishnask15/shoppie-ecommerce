@@ -33,7 +33,10 @@ const ShopContextProvider = ({ children }) => {
       return cartData.reduce((acc, item) => acc + (item.new_price * item.quantity), 0);
     };
 
-  const value = { all_product, cartData, addToCart, RemoveItem, totalPrice};
+    const  totalCartItems = cartData.length;
+    console.log(totalCartItems);
+
+  const value = { all_product, cartData, addToCart, RemoveItem, totalPrice, totalCartItems};
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
 

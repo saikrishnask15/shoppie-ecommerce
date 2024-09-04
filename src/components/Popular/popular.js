@@ -1,5 +1,5 @@
-import data_product from "./assests/data";
-import Item from "./item";
+import data_product from "../assests/data";
+import Item from "../Item/item";
 const Popular = () => {
   return (
     <div className="popular">

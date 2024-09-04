@@ -1,8 +1,8 @@
-import Hero from "../Hero";
-import NewCollection from "../NewCollection";
-import NewsLetter from "../NewsLetter";
-import Offers from "../offers";
-import Popular from "../popular";
+import Hero from "../Hero/Hero";
+import NewCollection from "../NewCollection/NewCollection";
+import NewsLetter from "../NewsLetter/NewsLetter";
+import Offers from "../Offers/offers";
+import Popular from "../Popular/popular";
 
 const Shop = () => {
   return (

@@ -1,7 +1,7 @@
-import star_icon from "./assests/star_icon.png";
-import stardull_icon from "./assests/star_dull_icon.png";
+import star_icon from "../assests/star_icon.png";
+import stardull_icon from "../assests/star_dull_icon.png";
 import { useContext } from "react";
-import { ShopContext } from "./ShopContext";
+import { ShopContext } from "../ShopContext";
 const ProductDisplay = ({ product }) => {
   const { addToCart } = useContext(ShopContext);
   const AddtoCart = (product) => {
