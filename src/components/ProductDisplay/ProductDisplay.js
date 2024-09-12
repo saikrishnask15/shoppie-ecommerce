@@ -2,6 +2,7 @@ import star_icon from "../assests/star_icon.png";
 import stardull_icon from "../assests/star_dull_icon.png";
 import { useContext } from "react";
 import { ShopContext } from "../ShopContext";
+import { Link } from "react-router-dom";
 const ProductDisplay = ({ product }) => {
   const { addToCart } = useContext(ShopContext);
   const AddtoCart = (product) => {
@@ -57,7 +58,8 @@ const ProductDisplay = ({ product }) => {
         </div>
         <div className="productDisplay-btn">
           <button onClick={() => AddtoCart(product)}>ADD TO CART</button>
-          <button onClick={() => AddtoCart(product)}>BUY NOW</button>
+          <Link to={'/cart'}><button onClick={() => AddtoCart(product)}>BUY NOW</button></Link>
+          
         </div>
       </div>
     </div>

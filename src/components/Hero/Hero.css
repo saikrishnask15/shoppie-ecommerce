@@ -1,5 +1,6 @@
 .hero {
   height: 100vh;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   background-image: linear-gradient(#e3d4e2, #ffffff);
@@ -56,9 +57,6 @@
   object-fit: contain;
 }
 @media screen and (max-width: 1024px) {
-  body{
-    padding-top: 50px;
-  }
   .hero {
     height: 30%;
   }

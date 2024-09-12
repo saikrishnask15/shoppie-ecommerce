@@ -1,23 +1,93 @@
+import { useState } from "react";
+import { auth } from "../../Firebase/FirebaseConfig";
+import { createUserWithEmailAndPassword} from "firebase/auth";
+import { toast } from "react-toastify";
+ 
 const LoginSignUp = () => {
+  const [SignUpData, setSignUpData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSignUpData({
+      ...SignUpData,
+      [name]: value,
+    });
+  };
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Validation check
+    if (!SignUpData.username || !SignUpData.email || !SignUpData.password) {
+      toast.error("Please fill out all fields"); // Show error toast
+      return;
+    }
+
+    if (!validateEmail(SignUpData.email)) {
+      toast.error("Please fill out all fields"); // Show error toast
+      return;
+    }
+   
+    try {
+      await createUserWithEmailAndPassword(
+        auth,
+        SignUpData.email,
+        SignUpData.password
+      );
+      console.log("Account Created");
+      toast.success("Account created successfully!"); // Show success toast
+      setSignUpData({
+        username: "",
+        email: "",
+        password: "",
+      });
+    } catch (error) {
+      console.log(error);
+      toast.error("Error creating account. Please try again."); // Show error toast
+    }
+  };
   return (
     <div className="loginSignup">
-      <div className="loginSignup-container">
+      <form className="loginSignup-container" onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <div className="loginSignup-fields">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
+          <input
+            type="text"
+            placeholder="Your Name"
+            onChange={handleChange}
+            name="username"
+            value={SignUpData.username}
+          />
+          <input
+            type="email"
+            placeholder="Email Address"
+            onChange={handleChange}
+            name="email"
+            value={SignUpData.email}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+            name="password"
+            value={SignUpData.password}
+          />
+
         </div>
         <div className="loginSignup-agree">
           <input type="checkbox" name="" id="" />
-          <p>I agree to the terms of use & privacy policy</p>
+          <p>I agree to the terms & privacy policy</p>
         </div>
         <button>Continue</button>
         <p className="loginSignup-login">
-          Already have a account? <a href="/">Login here</a>
+          Already have a account? <a href="/Login">Login here</a>
         </p>
-
-      </div>
+      </form>
     </div>
   );
 };

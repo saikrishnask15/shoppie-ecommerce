@@ -4,12 +4,9 @@
     padding-inline: 8vw;
 }
 .main{
-   padding-top: 60px;
+   padding-block: 3vw;
 }
 @media only screen and (max-width:1024px) {
-    .main{
-        padding-top: 0px;
-    }
     .container, .nav-bar{
         padding-inline: 6vw;
     }

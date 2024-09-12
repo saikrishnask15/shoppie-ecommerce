@@ -1,5 +1,6 @@
 .cart {
   margin: 60px auto;
+  min-height: 100vh;
 }
 .cart h1 {
   font-weight: 600;
@@ -166,9 +167,9 @@
   .cartItems-total-ctn h1 {
     font-size: 16px;
   }
-  .cart {
+  /* .cart {
     margin: 30px auto;
-  }
+  } */
   .cartItems-down {
     margin: 20px 0;
   }

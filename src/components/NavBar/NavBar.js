@@ -51,7 +51,7 @@ const NavBar = () => {
         </li>
       </div>
       <div className="nav-left">
-        <Link to="/login">
+        <Link to="/login" onClick={window.scrollTo(0,0)}>
           <button className="button">Login</button>
         </Link>
         <Link to="/cart">

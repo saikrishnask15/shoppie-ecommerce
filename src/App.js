@@ -10,12 +10,12 @@ import Footer from "./components/Footer/Footer";
 import banner_men from "./components/assests/banner_mens.png";
 import banner_women from "./components/assests/banner_women.png";
 import banner_kids from "./components/assests/banner_kids.png";
+import Login from './components/pages/LoginSignUp/Login';
 function App() {
   return (
     <BrowserRouter>
-    <div className="app">
       <NavBar />
-      <div className="app-content">
+
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route
@@ -34,11 +34,10 @@ function App() {
           <Route path="/Product/:productId" element={<Product />} />
         </Route>
         <Route path="/Cart" element={<Cart />} />
-        <Route path="/login" element={<LoginSignUp/>} /> 
+        <Route path="/SignUp" element={<LoginSignUp/>} /> 
+        <Route path="/Login" element={<Login/>} /> 
       </Routes>
-      </div>
       <Footer />
-      </div>
     </BrowserRouter>
   );
 }
