@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { auth } from "../../Firebase/FirebaseConfig";
+import { auth, db } from "../../Firebase/FirebaseConfig";
 import { createUserWithEmailAndPassword} from "firebase/auth";
 import { toast } from "react-toastify";
+import { doc, setDoc } from "firebase/firestore";
  
 const LoginSignUp = () => {
   const [SignUpData, setSignUpData] = useState({
@@ -29,7 +30,7 @@ const LoginSignUp = () => {
     }
 
     if (!validateEmail(SignUpData.email)) {
-      toast.error("Please fill out all fields"); // Show error toast
+      toast.error("Invalid email address"); // Show error toast
       return;
     }
    
@@ -39,8 +40,18 @@ const LoginSignUp = () => {
         SignUpData.email,
         SignUpData.password
       );
+      const user = auth.currentUser;
+      console.log(user);
       console.log("Account Created");
       toast.success("Account created successfully!"); // Show success toast
+      if(user){
+        await setDoc(doc(db, "users", user.uid), {
+          userName:SignUpData.username,
+          email:user.email,
+          password:SignUpData.password
+        });
+      }
+      window.location.href='/';
       setSignUpData({
         username: "",
         email: "",

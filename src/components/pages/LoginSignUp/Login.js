@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { auth } from "../../Firebase/FirebaseConfig";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
+import { ShopContext } from "../../ShopContext";
 
-const LoginSignUp = () => {
+const Login = () => {
+  const { login } = useContext(ShopContext);
   const [loginData, SetLoginData] = useState({
     email: "",
     password: "",
@@ -18,13 +18,15 @@ const LoginSignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(
-        auth,
-        loginData.email,
-        loginData.password
-      );
+      // await signInWithEmailAndPassword(
+      //   auth,
+      //   loginData.email,
+      //   loginData.password
+      // );
+      await login(loginData.email, loginData.password);
       console.log("login Success");
       toast.success("Login Success");
+      window.location.href = "/";
       SetLoginData({
         username: "",
         email: "",
@@ -64,4 +66,4 @@ const LoginSignUp = () => {
   );
 };
 
-export default LoginSignUp;
+export default Login;

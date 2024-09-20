@@ -4,10 +4,14 @@ import { useContext } from "react";
 import { ShopContext } from "../ShopContext";
 import { Link } from "react-router-dom";
 const ProductDisplay = ({ product }) => {
-  const { addToCart } = useContext(ShopContext);
+  const { addToCart, user} = useContext(ShopContext);
   const AddtoCart = (product) => {
-    addToCart(product);
-    // console.log(product);
+    if(user){
+      addToCart(product);
+    }
+    else{
+      window.location.href = '/Login';
+    }
   };
   return (
     <div className="productDisplay">

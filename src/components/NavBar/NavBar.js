@@ -12,8 +12,9 @@ import { ShopContext } from "../ShopContext";
 
 const NavBar = () => {
   const [showSideBar, setShowSideBar] = useState(false);
-  const { totalCartItems } = useContext(ShopContext);
+  const { totalCartItems, user, logout } = useContext(ShopContext);
   const location = useLocation();
+
   return (
     <div className="nav-bar">
       <a href="/">
@@ -51,10 +52,17 @@ const NavBar = () => {
         </li>
       </div>
       <div className="nav-left">
-        <Link to="/login" onClick={window.scrollTo(0,0)}>
-          <button className="button">Login</button>
-        </Link>
-        <Link to="/cart">
+        {user ? (
+          <Link to="/" onClick={logout}>
+            <button className="button">Log out</button>
+          </Link>
+        ) : (
+          <Link to="/Login" onClick={window.scrollTo(0, 0)}>
+            <button className="button">Login</button>
+          </Link>
+        )}
+
+        <Link to="/cart" onClick={window.scrollTo(0, 0)}>
           <FontAwesomeIcon icon={faCartShopping} />
         </Link>
         <div className="nav-left-count">{totalCartItems}</div>
