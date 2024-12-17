@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ShopContext } from "../../ShopContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const { cart, RemoveItem, totalPrice } = useContext(ShopContext);
   return (
@@ -23,7 +24,9 @@ const Cart = () => {
               <>
                 <div className="cartItems-format cart-format">
                   <img src={item.image} alt="" />
-                  <p>{item.name}</p>
+                  <Link to={`/product/${item.id}`}>
+                    <p>{item.name}</p>
+                  </Link>
                   <p>${item.new_price}</p>
                   <button>{item.quantity}</button>
                   <p>${item.new_price * item.quantity}</p>

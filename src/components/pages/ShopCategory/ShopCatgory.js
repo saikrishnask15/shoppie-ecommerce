@@ -1,12 +1,11 @@
 import { useContext } from "react";
 import Item from "../../Item/item";
 import { ShopContext } from "../../ShopContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const ShopCategory = (props) => {
-  const { all_product } = useContext(ShopContext);
-  console.log(all_product);
+  const { products, handleSortBy } = useContext(ShopContext);
+  console.log(products);
+
   return (
     <div className="shop-category container">
       <img className="ShopCategory-banner" src={props.banner} alt="" />
@@ -14,12 +13,18 @@ const ShopCategory = (props) => {
         <p>
           <span>Showing 1-12</span> Out of 36 products
         </p>
-      <div className="ShopCategory-sort">
-        Sort by <FontAwesomeIcon icon={faChevronDown} />
-      </div>
+        <div className="ShopCategory-sort">
+          {/* Sort by <FontAwesomeIcon icon={faChevronDown} /> */}
+          <select onChange={(e) => handleSortBy(e.target.value)}>
+            <option value="">Sort by</option>
+            <option value="price-asc">Low to High</option>
+            <option value="price-dsc">High to Low</option>
+            <option value="Name">Name (A-Z)</option>
+          </select>
+        </div>
       </div>
       <div className="ShopCategory-products">
-        {all_product.map((item, key) => {
+        {products.map((item, key) => {
           if (props.category === item.category) {
             return (
               <Item
@@ -37,7 +42,7 @@ const ShopCategory = (props) => {
         })}
       </div>
       <div className="ShopCategory-loadmore">
-       <p>Explore More</p>
+        <p>Explore More</p>
       </div>
     </div>
   );

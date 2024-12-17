@@ -2,7 +2,7 @@ import new_collections from "../assests/new_collections";
 import Item from "../Item/item";
 const NewCollection = () => {
   return (
-    <div className="new-collection">
+    <div id="New-collection" className="new-collection" >
       <div className="new-collection-text">
         <h1>new collections</h1>
         <hr />

@@ -21,6 +21,7 @@ const ShopContextProvider = ({ children }) => {
       await fetchCart(userCredential.user.uid); // Fetch cart after login
     } catch (error) {
       console.error("Login error:", error);
+      throw error;
     }
   };
 
@@ -40,6 +41,21 @@ const ShopContextProvider = ({ children }) => {
     if (cartDoc.exists()) {
       setCart(cartDoc.data().items);
     }
+  };
+
+  // sorting
+  const [products, setProducts] = useState([...all_product]);
+  const handleSortBy = (option) => {
+    let sortedProducts = [...all_product];
+    if (option === "price-asc") {
+      sortedProducts.sort((a, b) => a.new_price - b.new_price); //asc
+    } else if (option === "price-dsc") {
+      sortedProducts.sort((a, b) => b.new_price - a.new_price); //dsc
+    } else if (option === "Name") {
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name)); // alphabetical
+    }
+    setProducts(sortedProducts);
+    // setSortOption(option);
   };
 
   const addToCart = async (product) => {
@@ -92,7 +108,8 @@ const ShopContextProvider = ({ children }) => {
   const totalCartItems = cart ? cart.length : 0;
 
   const value = {
-    all_product,
+    products,
+    handleSortBy,
     cart,
     addToCart,
     RemoveItem,

@@ -6,10 +6,10 @@ import ProductDisplay from "../ProductDisplay/ProductDisplay";
 import DescriptionReviewsBox from "../DescriptionReview/DescriptionReviewsBox";
 import RelativeProduct from "../RelativeProducts/RelativeProduct";
 const Product = () => {
-  const {all_product} = useContext(ShopContext);
+  const {products} = useContext(ShopContext);
   const {productId} = useParams();
-  const product = all_product.find((e)=> e.id === Number(productId))
-  console.log(productId);
+  const product = products.find((e)=> e.id === Number(productId))
+  console.log(products);
     if(!product) {
       return <div>Product not found</div>;
     }

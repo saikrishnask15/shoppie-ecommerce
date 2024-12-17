@@ -13,12 +13,19 @@
 .ShopCategory-indexSort span{
     font-weight: 600;
 }
-.ShopCategory-sort{
-    border: 1px solid rgb(163, 161, 161);
-    border-radius: 15px;
-    padding: 4px 5px;
+.ShopCategory-sort select{
+  border: 1px solid rgb(163, 161, 161);
+  border-radius: 15px;
+  padding: 4px 5px; 
+  cursor: pointer;
 }
-
+.ShopCategory-sort select:hover{
+  border-color: #0f0f0f;
+}
+.ShopCategory-sort select:focus{
+  outline: none;
+  border-color: #0f0f0f;
+}
 .ShopCategory-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

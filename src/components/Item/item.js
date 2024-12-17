@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Item = (props) => {
   return (
     <div className="item">
-      <Link to={`/Product/${props.id}`} onClick={window.scrollTo(0,0)}>
+      <Link to={`/Product/${props.id}`} onClick={window.scrollTo(0, 0)}>
         <img src={props.image} alt="" />
       </Link>
       <p>{props.name}</p>

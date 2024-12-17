@@ -12,7 +12,8 @@ const Hero = () => {
           <p>collections</p>
           <p>for everyone</p>
         </div>
-        <button>
+        
+        <button onClick={()=>(window.location.href = "#New-collection")}>
           Latest Collections <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
